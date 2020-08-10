@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/pontos_inspecao_carreta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="false"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="false"
+        android:layout_marginStart="91dp"
+        android:layout_marginLeft="91dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginRight="72dp"
+        android:lineSpacingExtra="10sp"
+        android:text="Pontos de Inspeção"
+        android:textAllCaps="true"
+        android:textColor="#151515"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/secao_inferior"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pontos_inspecao_carreta"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginRight="163dp"
+        android:text="Seção Inferior Externa"
+        android:textColor="#151515"
+        android:textSize="16sp" />
+
+    <CheckBox
+        android:id="@+id/checkBox_secao_inferior"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/secao_inferior"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginRight="163dp"
+        android:text="Sim" />
+
+    <CheckBox
+        android:id="@+id/checkBox_secao_inferior2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/secao_inferior"
+        android:layout_marginStart="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginRight="163dp"
+        android:text="Não" />
+
+    <CheckBox
+        android:id="@+id/checkBox_secao_inferior3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/secao_inferior"
+        android:layout_marginStart="139dp"
+        android:layout_marginLeft="139dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginRight="163dp"
+        android:text="N/A" />
+
+    <EditText
+        android:id="@+id/txt_secao_inferior"
+        android:layout_width="330dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/checkBox_secao_inferior2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:background="#11000000"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#3F51B5" />
+
+    <TextView
+        android:id="@+id/portas_interiores_exterior"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_secao_inferior"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginRight="163dp"
+        android:text="Portas Interiores/Exteriores"
+        android:textColor="#151515"
+        android:textSize="16sp" />
+
+    <CheckBox
+        android:id="@+id/checkBox_portas_interiores_exterior"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/portas_interiores_exterior"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginRight="163dp"
+        android:text="Sim" />
+
+    <CheckBox
+        android:id="@+id/checkBox_portas_interiores_exterior2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/portas_interiores_exterior"
+        android:layout_marginStart="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginRight="163dp"
+        android:text="Não" />
+
+    <CheckBox
+        android:id="@+id/checkBox_portas_interiores_exterior3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/portas_interiores_exterior"
+        android:layout_marginStart="139dp"
+        android:layout_marginLeft="139dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginRight="163dp"
+        android:text="N/A" />
+
+    <EditText
+        android:id="@+id/txt_portas_interiores_exterior"
+        android:layout_width="330dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/checkBox_portas_interiores_exterior2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:background="#11000000"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#3F51B5" />
+
+    <TextView
+        android:id="@+id/lado_direito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_portas_interiores_exterior"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginRight="163dp"
+        android:text="Lado Direito"
+        android:textColor="#151515"
+        android:textSize="16sp" />
+
+    <CheckBox
+        android:id="@+id/checkBox_lado_direito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lado_direito"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginRight="163dp"
+        android:text="Sim" />
+
+    <CheckBox
+        android:id="@+id/checkBox_lado_direito2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lado_direito"
+        android:layout_marginStart="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginRight="163dp"
+        android:text="Não" />
+
+    <CheckBox
+        android:id="@+id/checkBox_lado_direito3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lado_direito"
+        android:layout_marginStart="139dp"
+        android:layout_marginLeft="139dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginRight="163dp"
+        android:text="N/A" />
+
+    <EditText
+        android:id="@+id/txt_lado_direito"
+        android:layout_width="330dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/checkBox_lado_direito2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:background="#11000000"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#3F51B5" />
+
+    <TextView
+        android:id="@+id/lado_esquerdo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_lado_direito"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginRight="163dp"
+        android:text="Lado Esquerdo"
+        android:textColor="#151515"
+        android:textSize="16sp" />
+
+    <CheckBox
+        android:id="@+id/checkBox_lado_esquerdo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lado_esquerdo"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginRight="163dp"
+        android:text="Sim" />
+
+    <CheckBox
+        android:id="@+id/checkBox_lado_esquerdo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lado_esquerdo"
+        android:layout_marginStart="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginRight="163dp"
+        android:text="Não" />
+
+    <CheckBox
+        android:id="@+id/checkBox_lado_esquerdo3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lado_esquerdo"
+        android:layout_marginStart="139dp"
+        android:layout_marginLeft="139dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginRight="163dp"
+        android:text="N/A" />
+
+    <EditText
+        android:id="@+id/txt_lado_esquerdo"
+        android:layout_width="330dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/checkBox_lado_esquerdo2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:background="#11000000"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#3F51B5" />
+
+    <TextView
+        android:id="@+id/paredeDianteira"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_lado_esquerdo"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginRight="163dp"
+        android:text="Parede Dianteira"
+        android:textColor="#151515"
+        android:textSize="16sp" />
+
+    <CheckBox
+        android:id="@+id/checkBox_p_Dianteira"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/paredeDianteira"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginRight="163dp"
+        android:text="Sim" />
+
+    <CheckBox
+        android:id="@+id/checkBox_p_Dianteira2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/paredeDianteira"
+        android:layout_marginStart="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginRight="163dp"
+        android:text="Não" />
+
+    <CheckBox
+        android:id="@+id/checkBox_p_Dianteira3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/paredeDianteira"
+        android:layout_marginStart="139dp"
+        android:layout_marginLeft="139dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginRight="163dp"
+        android:text="N/A" />
+
+    <EditText
+        android:id="@+id/txt_paredeDianteira"
+        android:layout_width="330dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/checkBox_p_Dianteira2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:background="#11000000"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#3F51B5" />
+
+    <TextView
+        android:id="@+id/Teto_interior"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_paredeDianteira"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginRight="163dp"
+        android:text="Teto Interior/Exterior"
+        android:textColor="#151515"
+        android:textSize="16sp" />
+
+    <CheckBox
+        android:id="@+id/checkBox_Teto_interior"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Teto_interior"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginRight="163dp"
+        android:text="Sim" />
+
+    <CheckBox
+        android:id="@+id/checkBox_Teto_interior2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Teto_interior"
+        android:layout_marginStart="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginRight="163dp"
+        android:text="Não" />
+
+    <CheckBox
+        android:id="@+id/checkBox_Teto_interior3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Teto_interior"
+        android:layout_marginStart="139dp"
+        android:layout_marginLeft="139dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginRight="163dp"
+        android:text="N/A" />
+
+    <EditText
+        android:id="@+id/txt_Teto_interior"
+        android:layout_width="330dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/checkBox_Teto_interior2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:background="#11000000"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#3F51B5" />
+
+    <TextView
+        android:id="@+id/Piso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_Teto_interior"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginRight="163dp"
+        android:text="Piso"
+        android:textColor="#151515"
+        android:textSize="16sp" />
+
+    <CheckBox
+        android:id="@+id/checkBox_Piso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Piso"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginRight="163dp"
+        android:text="Sim" />
+
+    <CheckBox
+        android:id="@+id/checkBox_Piso2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Piso"
+        android:layout_marginStart="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginRight="163dp"
+        android:text="Não" />
+
+    <CheckBox
+        android:id="@+id/checkBox_Piso3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Piso"
+        android:layout_marginStart="139dp"
+        android:layout_marginLeft="139dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginRight="163dp"
+        android:text="N/A" />
+
+    <EditText
+        android:id="@+id/txt_Piso"
+        android:layout_width="330dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/checkBox_Piso2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:background="#11000000"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#3F51B5" />
+
+    <Button
+        android:id="@+id/btn_Envio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_Piso"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="145dp"
+        android:layout_marginLeft="145dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="170dp"
+        android:layout_marginRight="170dp"
+        android:text="Enviar" />
+
+    <Button
+        android:id="@+id/btn_enviar4"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/btn_Envio"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="145dp"
+        android:layout_marginLeft="145dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="170dp"
+        android:layout_marginRight="170dp"
+        android:text="Enviar" />
+
+
+</RelativeLayout>

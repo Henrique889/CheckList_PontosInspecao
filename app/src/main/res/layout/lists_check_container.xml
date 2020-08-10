@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id ="@+id/list_checklist">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/id_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Número do Embarque"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/id_num_processo"
+            android:text="Número do Embarque"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:textSize="17sp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Data/Horário"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_weight="2"
+            />
+
+
+        <TextView
+            android:id="@+id/txt_dataHora"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Data/Horário"
+            android:textSize="17sp"
+
+            android:layout_weight="0.8"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="420dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Transportadora"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/txt_transportadora"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Transportadora"
+            android:textSize="17sp"
+
+            android:layout_weight="0.8"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nome"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_weight="2"
+            />
+
+
+        <TextView
+            android:id="@+id/nomeMotorista"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nome"
+            android:textSize="17sp"
+
+            android:layout_weight="0.8"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Placa do Caminhão"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_weight="2"
+            />
+
+
+        <TextView
+            android:id="@+id/txt_caminhao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Placa do caminhão"
+            android:textSize="17sp"
+
+            android:layout_weight="0.8"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Placa da Carreta"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/txt_Carreta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Placa da Carreta"
+            android:textSize="17sp"
+
+            android:layout_weight="0.8"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Número do Lacre OEA"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_weight="2"
+            />
+
+
+        <TextView
+            android:id="@+id/txtLacre_OEA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Número do Lacre OEA"
+            android:textSize="17sp"
+
+            android:layout_weight="0.8"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Número do Lacre do Armador"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_weight="2"
+            />
+
+
+        <TextView
+            android:id="@+id/txt_Numero_Lacre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Número do Lacre do Armador"
+            android:textSize="17sp"
+
+            android:layout_weight="0.8"
+            />
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_marginTop="10dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="#C8C7C7"
+            android:text="Pontos de Inspeção"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:text="Seção Inferior Externa"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_weight="2"
+            />
+
+        <TextView
+            android:id="@+id/txt_secao"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:hint="Não"
+            android:text="Não"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/txt_secao2"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:text=""
+            android:textSize="17sp" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/txt_secao3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:textColor="#000000"
+            android:textSize="17sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:text="Portas Interiores/Exteriores"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_weight="2"
+            />
+
+        <TextView
+            android:id="@+id/txt_portas_interiores"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:hint="Não"
+            android:text="Não"
+            android:textSize="17sp" />
+        <TextView
+            android:id="@+id/txt_portas_interiores2"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="17sp"
+            android:layout_weight="0.8"
+            />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/txt_portas_interiores3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:textColor="#000000"
+            android:textSize="17sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:text="Lado Direito"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_weight="2"
+            />
+
+        <TextView
+            android:id="@+id/txt_ladoDireito"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:hint="Não"
+            android:text="Não"
+            android:textSize="17sp" />
+        <TextView
+            android:id="@+id/txt_ladoDireito2"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="17sp"
+            android:layout_weight="0.8"
+            />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/txt_ladoDireito3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:textColor="#000000"
+            android:textSize="17sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:text="Lado Esquerdo"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_weight="2"
+            />
+
+        <TextView
+            android:id="@+id/txt_ladoEsquerdo"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:hint="Não"
+            android:text="Não"
+            android:textSize="17sp" />
+        <TextView
+            android:id="@+id/txt_ladoEsquerdo2"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="17sp"
+            android:layout_weight="0.8"
+            />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/txt_ladoEsquerdo3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:textColor="#000000"
+            android:textSize="17sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:text="Parede Dianteira"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_weight="2"
+            />
+
+        <TextView
+            android:id="@+id/txt_Parede_D"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:hint="Não"
+            android:text="Não"
+            android:textSize="17sp" />
+        <TextView
+            android:id="@+id/txt_Parede_D2"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="17sp"
+            android:layout_weight="0.8"
+            />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/txt_Parede_D3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:textColor="#000000"
+            android:textSize="17sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:text="Teto Interior/Exterior"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_weight="2"
+            />
+
+        <TextView
+            android:id="@+id/txt_teto_e"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:hint="Não"
+            android:text="Não"
+            android:textSize="17sp" />
+        <TextView
+            android:id="@+id/txt_teto_e2"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="17sp"
+            android:layout_weight="0.8"
+            />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/txt_teto_e3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:textColor="#000000"
+            android:textSize="17sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:text="Piso"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_weight="2"
+            />
+
+        <TextView
+            android:id="@+id/txt_Piso_"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:hint="Não"
+            android:text="Não"
+            android:textSize="17sp" />
+        <TextView
+            android:id="@+id/txt_Piso_2"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="17sp"
+            android:layout_weight="0.8"
+            />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/txt_Piso_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:textColor="#000000"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_marginTop="10dp"
+        />
+
+</LinearLayout>
