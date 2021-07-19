@@ -17,6 +17,7 @@
         <activity android:name=".checkList.CheckList_Container2"/>
         <activity android:name=".checkList.imagem.imageView_Container"/>
         <activity android:name=".checkList.CheckList_Container"/>
+        <activity android:name=".checkList.imagem.EscolherTipoImg"/>
         <activity android:name=".checkList.imagem.image_View"/>
         <activity android:name=".checkList.CheckList_Part2"/>
         <activity android:name=".checkList.CheckList_Part1"/>

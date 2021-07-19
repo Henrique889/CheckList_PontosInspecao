@@ -1,8 +1,10 @@
 package com.example.check17_pontosveiculo.ui.login;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -52,6 +54,11 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        String user = prefs.getString("f1","");
+        etEmail.setText(user);
+
+
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,6 +66,11 @@ public class LoginActivity extends AppCompatActivity {
 
                 String Email = etEmail.getText().toString();
                 String Password = etPassword.getText().toString();
+                
+                SharedPreferences prefes = PreferenceManager.getDefaultSharedPreferences(LoginActivity.this);
+                SharedPreferences.Editor editor = prefes.edit();
+                editor.putString("f1", Email);
+                editor.apply();
 
                 new LoginUser().execute(Email, Password);
                 loadingProgressBar.setVisibility(View.INVISIBLE);

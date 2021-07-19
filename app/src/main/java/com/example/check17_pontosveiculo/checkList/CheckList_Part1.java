@@ -16,6 +16,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.check17_pontosveiculo.R;
+import com.example.check17_pontosveiculo.checkList.imagem.EscolherTipoImg;
 import com.example.check17_pontosveiculo.checkList.imagem.image_View;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -476,7 +477,7 @@ public class CheckList_Part1 extends AppCompatActivity {
             case R.id.i1:
                 //perform any action;
                 Intent myIntent = new Intent(CheckList_Part1.this,
-                        image_View.class);
+                        EscolherTipoImg.class);
                 startActivity(myIntent);
                 return false;
 
