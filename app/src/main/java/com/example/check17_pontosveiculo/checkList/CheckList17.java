@@ -75,7 +75,6 @@ public class CheckList17 extends AppCompatActivity {
                 progress.setMessage( "Carregando..." );
                 progress.show();
 
-
                 Numero_Processo = txtNumero.getText().toString();
                 data_hora = txtData_Horario.getText().toString();
                 Transportadora = txtTransportadora.getText().toString();

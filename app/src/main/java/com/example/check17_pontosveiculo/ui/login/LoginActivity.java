@@ -26,7 +26,7 @@ import okhttp3.Response;
 
 public class LoginActivity extends AppCompatActivity {
 
-    EditText etEmail, etPassword;
+    EditText et_Email, etPassword;
     TextView tvRegister;
     Button loginButton ;
 
@@ -38,7 +38,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        etEmail = (EditText) findViewById(R.id.username);
+        et_Email = (EditText) findViewById(R.id.username);
         etPassword = (EditText) findViewById(R.id.password);
         tvRegister = (TextView)findViewById(R.id.tv_register);
         loginButton = findViewById(R.id.login);
@@ -55,21 +55,20 @@ public class LoginActivity extends AppCompatActivity {
         });
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-        String user = prefs.getString("f1","");
-        etEmail.setText(user);
-
+        String user = prefs.getString("d0","");
+        et_Email.setText(user);
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 loadingProgressBar.setVisibility(View.VISIBLE);
 
-                String Email = etEmail.getText().toString();
+                String Email = et_Email.getText().toString();
                 String Password = etPassword.getText().toString();
-                
+
                 SharedPreferences prefes = PreferenceManager.getDefaultSharedPreferences(LoginActivity.this);
                 SharedPreferences.Editor editor = prefes.edit();
-                editor.putString("f1", Email);
+                editor.putString("d0", Email);
                 editor.apply();
 
                 new LoginUser().execute(Email, Password);
