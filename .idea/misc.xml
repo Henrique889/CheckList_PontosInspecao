@@ -3,8 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/DOCUMENTOS-PC ANTIGO/AndroidStudio Programas/CheckList 17 Pontos veiculo/app/src/main/res/layout/activity_check01.xml" value="0.25416666666666665" />
+        <entry key="..\:/DOCUMENTOS-PC ANTIGO/AndroidStudio Programas/CheckList 17 Pontos veiculo/app/src/main/res/layout/activity_check_container.xml" value="0.25416666666666665" />
+        <entry key="..\:/DOCUMENTOS-PC ANTIGO/AndroidStudio Programas/CheckList 17 Pontos veiculo/app/src/main/res/layout/activity_checkinfo.xml" value="0.25416666666666665" />
         <entry key="..\:/DOCUMENTOS-PC ANTIGO/AndroidStudio Programas/CheckList 17 Pontos veiculo/app/src/main/res/layout/activity_login.xml" value="0.14074074074074075" />
+        <entry key="..\:/DOCUMENTOS-PC ANTIGO/AndroidStudio Programas/CheckList 17 Pontos veiculo/app/src/main/res/layout/activity_register.xml" value="0.25416666666666665" />
+        <entry key="..\:/DOCUMENTOS-PC ANTIGO/AndroidStudio Programas/CheckList 17 Pontos veiculo/app/src/main/res/layout/activity_showall1.xml" value="0.1787037037037037" />
+        <entry key="..\:/DOCUMENTOS-PC ANTIGO/AndroidStudio Programas/CheckList 17 Pontos veiculo/app/src/main/res/layout/checklist1_parte.xml" value="0.1" />
         <entry key="..\:/DOCUMENTOS-PC ANTIGO/AndroidStudio Programas/CheckList 17 Pontos veiculo/app/src/main/res/layout/checklist_0.xml" value="0.14074074074074075" />
+        <entry key="..\:/DOCUMENTOS-PC ANTIGO/AndroidStudio Programas/CheckList 17 Pontos veiculo/app/src/main/res/layout/checklist_container.xml" value="0.1" />
+        <entry key="..\:/DOCUMENTOS-PC ANTIGO/AndroidStudio Programas/CheckList 17 Pontos veiculo/app/src/main/res/layout/modelo_rv.xml" value="0.25416666666666665" />
+        <entry key="..\:/DOCUMENTOS-PC ANTIGO/AndroidStudio Programas/CheckList 17 Pontos veiculo/app/src/main/res/layout/register_usuario.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>

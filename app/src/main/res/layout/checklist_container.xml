@@ -489,16 +489,36 @@
         android:textColor="#3F51B5" />
 
     <Button
-        android:id="@+id/btn_Envio"
+        android:id="@+id/btn_foto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txt_Piso"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="145dp"
-        android:layout_marginLeft="145dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginLeft="120dp"
         android:layout_marginTop="0dp"
-        android:layout_marginEnd="170dp"
-        android:layout_marginRight="170dp"
+        android:layout_marginEnd="130dp"
+        android:layout_marginRight="130dp"
+        android:drawableStart="@android:drawable/ic_menu_camera"
+        android:text="Tirar Foto"
+        android:drawableLeft="@android:drawable/ic_menu_camera" />
+    <ImageView
+        android:id="@+id/imgFoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/btn_Envio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_foto"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="140dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginRight="150dp"
         android:text="Enviar" />
 
     <Button
