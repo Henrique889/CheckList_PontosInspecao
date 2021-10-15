@@ -563,9 +563,12 @@ public class CheckList_Container extends AppCompatActivity {
 
                 String txt_piso = txtPiso.getText().toString();
                 parametros.put("txt_piso", txt_piso);
-
-                String combustivel_imagem = converterImgString(bitmap);
-
+                String combustivel_imagem;
+                if (bitmap != null){
+                    combustivel_imagem = converterImgString(bitmap);
+                }else{
+                    combustivel_imagem = "";
+                }
 
                 parametros.put("imagem", combustivel_imagem);
                 SendEmail(secao, portas, ladoDireito, ladoEsquerdo, parede, teto, piso);
