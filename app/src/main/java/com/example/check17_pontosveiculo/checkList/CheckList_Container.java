@@ -190,10 +190,13 @@ public class CheckList_Container extends AppCompatActivity {
                 ", Lado direito: "+ ladoDireito.toString()+", Anotação: "+ txt_ladodireito.getText().toString()+", Lado esquerdo: "+ ladoEsquerdo.toString()+
                 ", Anotação: "+ txt_ladoesquerdo.getText().toString()+", Parede dianteira: "+ parede.toString()+", Anotação: "+ txtparede_Dianteira.getText().toString()+
                 ", Teto interior/exterior: "+ teto.toString()+", Anotação: "+ txt_Teto.getText().toString()+", Piso: "+ piso.toString()+
-                ", Anotação: "+ txtPiso.getText().toString() + "\nA imagem está em anexo...");
+                ", Anotação: "+ txtPiso.getText().toString());
 
-        email.putExtra(Intent.EXTRA_STREAM, bmpUri);
-        email.setType("image/*");
+        if (bmpUri != null){
+            email.putExtra(Intent.EXTRA_STREAM, bmpUri);
+            email.setType("image/*");
+        }
+
         /* Send it off to the Activity-Chooser */
         startActivity(Intent.createChooser(email, "Enviando E-mail..."));
 
@@ -566,11 +569,8 @@ public class CheckList_Container extends AppCompatActivity {
                 String combustivel_imagem;
                 if (bitmap != null){
                     combustivel_imagem = converterImgString(bitmap);
-                }else{
-                    combustivel_imagem = "";
+                    parametros.put("imagem", combustivel_imagem);
                 }
-
-                parametros.put("imagem", combustivel_imagem);
                 SendEmail(secao, portas, ladoDireito, ladoEsquerdo, parede, teto, piso);
 
                 return parametros;
