@@ -70,6 +70,7 @@ public class CheckList_Part1 extends AppCompatActivity{
     EditText txt_roda,txt_exterior,txt_piso_interior,txt_portas,txt_paredes,txt_teto,txt_parede_dianteira,txt_refrigerador,txt_escapamento;
     Button btnEnviando, btnFoto;
     StringRequest stringRequest;
+    boolean sendit = false;
 
     private static final int COD_PERMISSAO = 100;
     private static final int COD_SELECIONA = 10;
@@ -212,13 +213,8 @@ public class CheckList_Part1 extends AppCompatActivity{
             public void onClick(View v) {
                 carregarWebService();
 
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        Intent intent = new Intent(CheckList_Part1.this,CheckList17.class);
-                        startActivity(intent);
-                    }
-                }, 6000);
+                Intent intent = new Intent(CheckList_Part1.this,CheckList17.class);
+                startActivity(intent);
 
             }
         });
@@ -256,8 +252,12 @@ public class CheckList_Part1 extends AppCompatActivity{
                 ", Escapamento: " + escapamento.toString() + ", Anotação: " + txt_escapamento.getText().toString() + "\nA imagem está em anexo...");
         email.putExtra(Intent.EXTRA_STREAM, bmpUri);
         email.setType("image/*");
-        // Send it off to the Activity-Chooser
-        startActivity(Intent.createChooser(email, "Enviando E-mail..."));
+        email.setPackage("com.google.android.gm");
+        if (email.resolveActivity(getPackageManager())!=null)
+            startActivity(Intent.createChooser(email, "Enviando E-mail..."));
+        else
+            Toast.makeText(this,"Gmail App is not installed",Toast.LENGTH_SHORT).show();
+
     }
     // Returns the URI path to the Bitmap displayed in specified ImageView
     public Uri getLocalBitmapUri(ImageView imageView) {
@@ -398,12 +398,11 @@ public class CheckList_Part1 extends AppCompatActivity{
         String ip = getString( R.string.ip);
         String url = ip+"/chek17pontos/cadastro_checklist.php?";
 
-
-
         stringRequest = new StringRequest( Request.Method.POST, url, new Response.Listener <String>() {
             @Override
             public void onResponse ( String response ) {
                 if (response.trim().equalsIgnoreCase( "registra" )) {
+                    sendit = true;
                     showToast( "Registro com sucesso");
                 } else {
                     showToast("Registro não inserido" );
@@ -841,18 +840,17 @@ public class CheckList_Part1 extends AppCompatActivity{
 
                 parametros.put("imagem", combustivel_imagem);
 
+
                 sendEmail(parachoque, motor, pneus, piso_cabine, combustivel, cabine, tanques_ar, eixos,
                         quinta_roda, exterior, piso_interior, portas_afora, paredes_laterais, teto_interior, parede_dianteira,
                         refrigerador, escapamento);
 
                 return parametros;
-
             }
 
         };
 
         MySingleton.getInstance(CheckList_Part1.this).addToRequestQueue(stringRequest);
-
 
     }
 
