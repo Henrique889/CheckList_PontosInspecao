@@ -17,6 +17,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
 import android.provider.MediaStore;
 import android.provider.Settings;
 import android.util.Base64;
@@ -211,8 +212,13 @@ public class CheckList_Part1 extends AppCompatActivity{
             public void onClick(View v) {
                 carregarWebService();
 
-                Intent intent = new Intent(CheckList_Part1.this,CheckList17.class);
-                startActivity(intent);
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        Intent intent = new Intent(CheckList_Part1.this,CheckList17.class);
+                        startActivity(intent);
+                    }
+                }, 6000);
 
             }
         });
@@ -834,6 +840,7 @@ public class CheckList_Part1 extends AppCompatActivity{
                 parametros.put("escapamento_anotacao", Txt_escapamento);
 
                 parametros.put("imagem", combustivel_imagem);
+
                 sendEmail(parachoque, motor, pneus, piso_cabine, combustivel, cabine, tanques_ar, eixos,
                         quinta_roda, exterior, piso_interior, portas_afora, paredes_laterais, teto_interior, parede_dianteira,
                         refrigerador, escapamento);
