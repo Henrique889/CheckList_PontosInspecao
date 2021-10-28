@@ -224,7 +224,14 @@ public class CheckList_Container extends AppCompatActivity {
             bmp.compress(Bitmap.CompressFormat.PNG, 90, out);
             out.close();
             // **Warning:** This will fail for API >= 24, use a FileProvider as shown below instead.
-            bmpUri = Uri.fromFile(file);
+            if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.N)
+            {
+                String authorities= CheckList_Container.this.getPackageName()+".provider";
+                bmpUri = FileProvider.getUriForFile(CheckList_Container.this,authorities,file);
+            }else
+            {
+                bmpUri = Uri.fromFile(file);
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -308,15 +315,19 @@ public class CheckList_Container extends AppCompatActivity {
                 }
                 break;
             case COD_FOTO:
-                MediaScannerConnection.scanFile( CheckList_Container.this, new String[]{path}, null,
-                        new MediaScannerConnection.OnScanCompletedListener() {
-                            @Override
-                            public void onScanCompleted ( String path, Uri uri ) {
-                                Log.i( "Path", "" + path );
-                            }
-                        } );
-                bitmap = BitmapFactory.decodeFile( path );
-                imgFoto.setImageBitmap( bitmap );
+                if (data != null)
+                {
+                    MediaScannerConnection.scanFile( CheckList_Container.this, new String[]{path}, null,
+                            new MediaScannerConnection.OnScanCompletedListener() {
+                                @Override
+                                public void onScanCompleted ( String path, Uri uri ) {
+                                    Log.i( "Path", "" + path );
+                                }
+                            } );
+                    bitmap = BitmapFactory.decodeFile( path );
+                    imgFoto.setImageBitmap( bitmap );
+                }
+
                 break;
         }
         bitmap=redimensionarImagem(bitmap,580,580);

@@ -282,7 +282,15 @@ public class CheckList_Part1 extends AppCompatActivity{
             bmp.compress(Bitmap.CompressFormat.PNG, 90, out);
             out.close();
             // **Warning:** This will fail for API >= 24, use a FileProvider as shown below instead.
-            bmpUri = Uri.fromFile(file);
+            if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.N)
+            {
+                String authorities= CheckList_Part1.this.getPackageName()+".provider";
+                bmpUri = FileProvider.getUriForFile(CheckList_Part1.this,authorities,file);
+            }else
+            {
+                bmpUri = Uri.fromFile(file);
+            }
+
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -334,6 +342,8 @@ public class CheckList_Part1 extends AppCompatActivity{
             fileImagem = new File(path);
             Intent intent=new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
             intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(fileImagem));
+            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+
             if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.N)
             {
                 String authorities= CheckList_Part1.this.getPackageName()+".provider";
@@ -349,7 +359,7 @@ public class CheckList_Part1 extends AppCompatActivity{
     }
 
     @Override
-    public void onActivityResult ( int requestCode, int resultCode, Intent data ) {
+    protected void onActivityResult ( int requestCode, int resultCode, Intent data ) {
         super.onActivityResult( requestCode, resultCode, data );
         switch (requestCode) {
             case COD_SELECIONA:
@@ -363,15 +373,18 @@ public class CheckList_Part1 extends AppCompatActivity{
                 }
                 break;
             case COD_FOTO:
-                MediaScannerConnection.scanFile( CheckList_Part1.this, new String[]{path}, null,
-                        new MediaScannerConnection.OnScanCompletedListener() {
-                            @Override
-                            public void onScanCompleted ( String path, Uri uri ) {
-                                Log.i( "Path", "" + path );
-                            }
-                        } );
-                bitmap = BitmapFactory.decodeFile( path );
-                imgFoto.setImageBitmap( bitmap );
+                if (data != null)
+                {
+                    MediaScannerConnection.scanFile( CheckList_Part1.this, new String[]{path}, null,
+                            new MediaScannerConnection.OnScanCompletedListener() {
+                                @Override
+                                public void onScanCompleted ( String path, Uri uri ) {
+                                    Log.i( "Path", "" + path );
+                                }
+                            } );
+                    bitmap = BitmapFactory.decodeFile( path );
+                    imgFoto.setImageBitmap( bitmap );
+                }
                 break;
         }
         bitmap=redimensionarImagem(bitmap,580,580);
